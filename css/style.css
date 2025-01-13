@@ -1,0 +1,174 @@
+:root {
+    --primary-color: #119588;
+    --background-color: white;
+    --text-color: black;
+    --dark-background-color: #121212;
+    --dark-text-color: #f0f0f0;
+    --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 5px solid var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.name {
+    font-size: 2.5em;
+    color: var(--primary-color);
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 1000;
+}
+
+.theme-toggle:hover {
+    background-color: #00b5b5;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-color);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 2px solid var(--primary-color);
+    /* Adds border around each section */
+    border-radius: 10px;
+    /* Rounded corners for the sections */
+    transition: box-shadow 0.3s, transform 0.3s;
+    background-color: #ffffff;
+    /* White background for sections */
+}
+
+/* Optional: Add hover effect for sections */
+.section:hover {
+    transform: translateY(-5px);
+    /* Lift effect on hover */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+    /* Subtle shadow for hover effect */
+}
+
+body.dark-mode .section {
+    background-color: #1e1e1e;
+    /* Darker background for sections in dark mode */
+    color: var(--dark-text-color);
+    /* White text for dark mode */
+    border: 2px solid var(--dark-text-color);
+    /* Lighter border color in dark mode */
+}
+
+body.dark-mode .section a {
+    color: var(--dark-text-color);
+    /* Links inside sections in dark mode */
+}
+
+body.dark-mode .section ul li {
+    color: var(--dark-text-color);
+    /* List items adapt to dark mode */
+}
+
+
+.section:hover {
+    transform: translateY(-5px);
+}
+
+.section h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.contact .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Ensures the icons stay vertically centered */
+    gap: 20px;
+}
+
+.contact .social-links img {
+    width: 40px;
+    /* Adjust the size as needed */
+    height: 40px;
+    /* Maintain the aspect ratio */
+    transition: transform 0.3s;
+    object-fit: contain;
+    /* Ensure the icons maintain their aspect ratio */
+}
+
+.contact .social-links img:hover {
+    transform: scale(1.1);
+}
